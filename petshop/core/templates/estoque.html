@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div id="main">
+    <div class="header">
+        <h1>Estoque</h1>
+        <h2>Controle de Estoque</h2>
+    </div>
+{% for item in estoque %}
+    <div class="content">
+        <div class="lista">
+            <span title="{{ item.pk }}">{{ item.pk }}</span>
+        </div>
+        <div>
+            <a>{{ item.nome }}</a>            
+        </div>
+        <div>
+            <a>{{ item.qtd }}</a><span>   -   </span>
+            <a>{{ item.valor }}</a><span>   -   </span>
+            <a></a>
+        </div>
+    </div>
+</div>
+{% empty %}
+{% endfor %}
+{% endblock %}
