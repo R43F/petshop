@@ -13,3 +13,7 @@ def estoque(request):
         'estoque': estoque
     }
     return render(request, template_name, context)
+
+
+def agendamento(request):
+    return render(request, 'agendamento.html')

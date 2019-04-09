@@ -98,14 +98,20 @@ WSGI_APPLICATION = 'petshop.wsgi.application'
 #             'PORT': os.environ['3306'],
 #         }
 #     }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'ebdb',
+#         'USER': 'daniel',
+#         'PASSWORD': 'newnewnew',
+#         'HOST': 'aaupvkvyrgkaot.cekxrkqg3v58.sa-east-1.rds.amazonaws.com',
+#         'PORT': '3306',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ebdb',
-        'USER': 'daniel',
-        'PASSWORD': 'newnewnew',
-        'HOST': 'aaupvkvyrgkaot.cekxrkqg3v58.sa-east-1.rds.amazonaws.com',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
     }
 }
 # Instalar cliente mysql
