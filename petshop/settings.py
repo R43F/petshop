@@ -26,7 +26,7 @@ SECRET_KEY = 'tih%0s8gk_j#_c!(yuy1l0(0()iv9o@if1htm)dp1&=*0k44dx'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+# django-env.gfnxx3ue6m.sa-east-1.elasticbeanstalk.com
 
 # Application definition
 
@@ -75,16 +75,42 @@ WSGI_APPLICATION = 'petshop.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# if 'RDS_HOSTNAME' in os.environ:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'NAME': os.environ['RDS_DB_NAME'],
+#             'USER': os.environ['RDS_USERNAME'],
+#             'PASSWORD': os.environ['RDS_PASSWORD'],
+#             'HOST': os.environ['RDS_HOSTNAME'],
+#             'PORT': os.environ['RDS_PORT'],
+#         }
+#     }
+
+# if 'aaupvkvyrgkaot.cekxrkqg3v58.sa-east-1.rds.amazonaws.com' in os.environ:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'NAME': os.environ['ebdb'],
+#             'USER': os.environ['daniel'],
+#             'PASSWORD': os.environ['newnewnew'],
+#             'HOST': os.environ['aaupvkvyrgkaot.cekxrkqg3v58.sa-east-1.rds.amazonaws.com'],
+#             'PORT': os.environ['3306'],
+#         }
+#     }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'petshop',
-        'USER': 'root',
-        'PASSWORD': 'Newnewnew16@',
-        'HOST': 'localhost',
+        'NAME': 'ebdb',
+        'USER': 'daniel',
+        'PASSWORD': 'newnewnew',
+        'HOST': 'aaupvkvyrgkaot.cekxrkqg3v58.sa-east-1.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
+# Instalar cliente mysql
+# sudo apt-get install python-dev default-libmysqlclient-dev
+# pip install mysqlclient
 
 
 # Password validation
@@ -109,7 +135,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'UTC'
 
