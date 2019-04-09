@@ -1,19 +1,27 @@
 # petshop
 Instalar anviente virtual com Python 3
-Virtualenv
-https://pythonacademy.com.br/blog/python-e-virtualenv-como-programar-em-ambientes-virtuais
-OBS: Se não conseguir instalar o virtualenv não tem problema, é so padrão utilizar ambientes virtuais.
+https://fernandofreitasalves.com/tutorial-virtualenv-para-iniciantes-windows/
+1 > python -m venv myvenv -> Instalar Virtualenv¹
+2 > myvenv\Scripts\activate -> Ativar Ambiente virtual
+3 > python -m pip install --upgrade pip   -> Atualizar o pip
+4 > pip install Django==2.2 - > Instalar o Django
+5 > pip install --upgrade setuptools -> Atualizar setuptools
+6 > pip install mysql-connector-python
+--> crir um arquivo requirements.txt com o codigo abaixo
+mysqlclient==1.4.2
+7 > pip install -r requirements.txt
 
-Instalar o Python 3 (ultima versão)
+¹ Se não conseguir instalar o virtualenv não tem problema, é so padrão utilizar ambientes virtuais.
 
-Instalar Django (Ultima Versão)
 
-Instalar cliente Mysql
+
+
+Instalar cliente Mysql no Linux
 sudo apt-get install python-dev default-libmysqlclient-dev
 pip install mysqlclient
 
 
-Apos clonar o diretorio, entre na pasta raiz e rode o comando abaixo
+Apos clonar o diretorio, entre na pasta raiz e rode os comandos abaixo
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
