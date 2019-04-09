@@ -1,5 +1,5 @@
 # petshop
-Instalar anviente virtual com Python 3
+Instalar anviente virtual com Python 3 <br>
 https://fernandofreitasalves.com/tutorial-virtualenv-para-iniciantes-windows/
 1 > python -m venv myvenv -> Instalar Virtualenv¹
 2 > myvenv\Scripts\activate -> Ativar Ambiente virtual
