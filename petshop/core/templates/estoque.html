@@ -11,16 +11,17 @@
     {% for item in estoque %}
     <div class="content">
         <div class="lista">
-            <span title="{{ item.pk }}">{{ item.pk }}</span>
+            <span title="{{ item.pk }}">Codigo: {{ item.pk }}</span>
         </div>
         <div>
-            <a>{{ item.nome }}</a>            
+            <a>Nome do Produto: {{ item.nome }}</a>            
         </div>
         <div>
-            <a>{{ item.qtd }}</a><span>   -   </span>
-            <a>{{ item.valor }}</a><span>   -   </span>
+            <a> Quantidade: {{ item.qtd }}</a><span>   -   </span>
+            <a>Valor: {{ item.valor }}</a><span>   -   </span>
             <a></a>
         </div>
+        <hr>
     </div>
     {% empty %}
     <span>Não existe item no banco!</span>
